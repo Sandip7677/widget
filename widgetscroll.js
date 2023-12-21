@@ -1,7 +1,7 @@
+function embedMyWidget() {
+    document.addEventListener('DOMContentLoaded', function () {
 
-
-
-function getAllCandidate() {
+    function getAllCandidate() {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://stsytvmbgt.us-east-1.awsapprunner.com/chatgpt/getGeneratedArticalByBusinessId?businessId=141", true);
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -140,3 +140,12 @@ function getAllCandidate() {
   
   
     getAllCandidate();
+
+        
+    });
+}
+
+embedMyWidget();
+
+
+
