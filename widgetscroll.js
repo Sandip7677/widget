@@ -121,7 +121,7 @@ function embedMyWidget() {
     }
   
 
-    var close = document.getElementById("myModal");
+    var close = document.getElementById("closem");
     close.onclick = function() {
         document.getElementById("myModal").style.display = "none";
         document.body.classList.remove("blur-background");
