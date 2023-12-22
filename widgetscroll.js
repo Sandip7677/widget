@@ -2,10 +2,14 @@ function embedMyWidget() {
     document.addEventListener('DOMContentLoaded', function () {
 
     function getAllCandidate() {
+        var model=document.getElementById("myModal");
+        var className = model.className;
+        var c=className.split(" ");
+        
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://stsytvmbgt.us-east-1.awsapprunner.com/chatgpt/getGeneratedArticalByBusinessId?businessId=141", true);
+    xhr.open("GET", `https://stsytvmbgt.us-east-1.awsapprunner.com/chatgpt/getGeneratedArticalByBusinessId?businessId=${c[0]}`, true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("authorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpUmVzdGF1cmFudGVtcGxveWVlSWQiOjI5LCJ2RW1wbG95ZWVFbWFpbCI6Imttcmthbmh5YTNAZ21haWwuY29tIiwiaWF0IjoxNzAzMjM3ODU5LCJleHAiOjE3MDMzMjQyNTl9.MnKJXmK0HUl4NhalvB6IAds8c6AqTojN2wsuZT_nSek");
+    xhr.setRequestHeader("authorization", c[1]);
   xhr.send();
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status == 200) {
