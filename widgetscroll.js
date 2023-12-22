@@ -5,7 +5,7 @@ function embedMyWidget() {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://stsytvmbgt.us-east-1.awsapprunner.com/chatgpt/getGeneratedArticalByBusinessId?businessId=141", true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("authorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpUmVzdGF1cmFudGVtcGxveWVlSWQiOjI5LCJ2RW1wbG95ZWVFbWFpbCI6Imttcmthbmh5YTNAZ21haWwuY29tIiwiaWF0IjoxNzAyOTc1NDQ1LCJleHAiOjE3MDMwNjE4NDV9.J2wLrBkK5R5LXxr1kWwStBIN0KSxFp8mPI-OWh-_SI4");
+    xhr.setRequestHeader("authorization", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpUmVzdGF1cmFudGVtcGxveWVlSWQiOjI5LCJ2RW1wbG95ZWVFbWFpbCI6Imttcmthbmh5YTNAZ21haWwuY29tIiwiaWF0IjoxNzAzMjM3ODU5LCJleHAiOjE3MDMzMjQyNTl9.MnKJXmK0HUl4NhalvB6IAds8c6AqTojN2wsuZT_nSek");
   xhr.send();
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status == 200) {
