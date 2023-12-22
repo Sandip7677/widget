@@ -27,7 +27,7 @@ function embedMyWidget() {
          
         openModal();
       
-        console.log(finalRes,"custom html response");
+        // console.log(finalRes,"custom html response");
       }
     };
     
@@ -36,6 +36,7 @@ function embedMyWidget() {
     var slides = document.querySelectorAll('.slider .slide');
     
     function showSlide(index) {
+        console.log(slides.length);
       if (index < 0) {
         currentIndex = 0;
       } else if (index >= finalRes.length) {
