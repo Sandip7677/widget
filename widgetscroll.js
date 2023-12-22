@@ -38,7 +38,7 @@ function embedMyWidget() {
     function showSlide(index) {
       if (index < 0) {
         currentIndex = 0;
-      } else if (index >= 2) {
+      } else if (index >= finalRes.length) {
         currentIndex = 0;
       } else {
         currentIndex = index;
