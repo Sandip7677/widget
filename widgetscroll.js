@@ -131,12 +131,12 @@ function embedMyWidget() {
     //   document.body.classList.remove("blur-background");
     // }
   
-    window.onclick = function (event) {
-      var modal = document.getElementById("myModal");
-      if (event.target == modal) {
-        closeModal();
-      }
-    };
+    // window.onclick = function (event) {
+    //   var modal = document.getElementById("myModal");
+    //   if (event.target == modal) {
+    //     closeModal();
+    //   }
+    // };
   
   
     getAllCandidate();
