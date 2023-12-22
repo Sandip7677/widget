@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
     display: none;
     position: relative;
-    transform: translate(-50%, -50%);
+/*     transform: translate(-50%, -50%); */
     z-index: 2; /* Increase the z-index to place it above the blur background */
     width: 85%; /* Set width to auto to adjust based on content */
     background-color: white;
