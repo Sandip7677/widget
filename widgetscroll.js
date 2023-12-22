@@ -32,8 +32,9 @@ function embedMyWidget() {
     };
     
   }
+    getAllCandidate();
     var currentIndex = 0;
-    var slides = document.querySelectorAll('.slider .slide');
+    var slides = document.querySelectorAll('.slide');
     
     function showSlide(index) {
         console.log(slides.length);
@@ -141,8 +142,6 @@ function embedMyWidget() {
     //   }
     // };
   
-  
-    getAllCandidate();
 
         
     });
