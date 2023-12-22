@@ -1,6 +1,8 @@
 function embedMyWidget() {
     document.addEventListener('DOMContentLoaded', function () {
 
+    var finalRes;
+        
     function getAllCandidate() {
         var model=document.getElementById("myModal");
         var Businessid = model.dataset.indexNumber;
@@ -12,7 +14,7 @@ function embedMyWidget() {
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status == 200) {
         var responseData = JSON.parse(xhr.responseText);
-        var finalRes = responseData.data;
+         finalRes = responseData.data;
         
         for (var i = 0; i < finalRes.length; i++) {
            var existingElement = document.getElementById('insertslid');
@@ -32,12 +34,12 @@ function embedMyWidget() {
     };
     
   }
-    getAllCandidate();
+    
     var currentIndex = 0;
-    var slides = document.querySelectorAll('.slide');
+    var slides = document.querySelectorAll('.slider .slide');
     
     function showSlide(index) {
-        console.log(slides.length);
+        console.log(finalRes.length);
       if (index < 0) {
         currentIndex = 0;
       } else if (index >= finalRes.length) {
@@ -141,7 +143,9 @@ function embedMyWidget() {
     //     closeModal();
     //   }
     // };
-  
+
+
+    getAllCandidate();
 
         
     });
