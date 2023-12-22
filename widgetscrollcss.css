@@ -1,0 +1,87 @@
+ body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  #myModal {
+    font-family: 'Poppins', sans-serif;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Increase the z-index to place it above the blur background */
+    width: 85%; /* Set width to auto to adjust based on content */
+    background-color: white;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin:20px 0;
+     /* overflow-y: auto; Enable vertical scrollbar if needed */
+  }
+
+  #myModal.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Increase alpha channel for more blur */
+    /*z-index: 1;  Lower z-index to ensure it's behind the modal */
+    backdrop-filter: blur(10px); /* Adjust the blur value */
+  }
+  .modal-content {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+  }
+
+  .close {
+    font-size: 40px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+  }
+
+  #modalData {
+    max-height: 490px; /* Set a maximum height and add scrollbar if content is taller */
+  }
+  
+   #slider-container {
+    position: relative;
+    /*max-width: 600px;*/
+    margin: auto;
+  }
+
+  .slider {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  img {
+    width: 100px;
+    height: auto;
+  }
+
+  #prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  #prevBtn {
+    left: -20px;
+    font-size:32px;
+    font-weight:bolder;
+  }
+
+  #nextBtn {
+    right: -20px;
+    font-size:32px;
+    font-weight:bolder;
+  }
