@@ -3,13 +3,11 @@ function embedMyWidget() {
 
     function getAllCandidate() {
         var model=document.getElementById("myModal");
-        var className = model.className;
-        var c=className.split(" ");
+        var Businessid = model.dataset.indexNumber;
         
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", `https://stsytvmbgt.us-east-1.awsapprunner.com/chatgpt/getGeneratedArticalByBusinessId?businessId=${c[0]}`, true);
+    xhr.open("GET", `https://stsytvmbgt.us-east-1.awsapprunner.com/client/campaigns?businessId=${Businessid}`, true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("authorization", c[1]);
   xhr.send();
     xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status == 200) {
