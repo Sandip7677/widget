@@ -13,7 +13,7 @@
     padding: 20px 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin:20px 0;
+    margin:20px auto;
      /* overflow-y: auto; Enable vertical scrollbar if needed */
   }
 
